@@ -21,8 +21,7 @@
 ## 데이터 수집.웹 크롤링
 ### Destiny2 Weblore
 
- 웹 크롤링을 위해 필요한 **urlopen, BeautifulSoup** 모듈  
-Mysql로 관리할 database를 json 파일로 만들어 사용하기 위한 **pandas** import
+* 웹 크롤링을 위해 필요한 **urlopen, BeautifulSoup** 모듈  Mysql로 관리할 database를 json 파일로 만들어 사용하기 위한 **pandas** import
 ```python
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
@@ -30,7 +29,7 @@ import pandas as pd
 import re
 ```
 
-destinypedia의 Weblore페이지 구성이 season별로 나뉘어 있기때문에 웹 크롤링에 사용할 season명을 따로 크롤링해 **season_list_tag**에 저장
+* destinypedia의 Weblore페이지 구성이 season별로 나뉘어 있기때문에 웹 크롤링에 사용할 season명을 따로 크롤링해 **season_list_tag**에 저장
 ```python
 url_weblore = 'https://www.destinypedia.com/Weblore'
 
@@ -99,7 +98,7 @@ for i in range(len(list_season)):
 ```
 ---
 
-수집한 데이터 **json**파일로 저장
+* 수집한 데이터 **json**파일로 저장
 ```python
 df_concat.to_json('./Database/weblore.json',orient='records')
 ```
@@ -120,4 +119,6 @@ df_concat.to_json('./Database/weblore.json',orient='records')
 |40|Warmind|Cryptarch|From "Collapse and Post-Collapse Incidents on ...|
 |41|Warmind|Zavala|Ikora has confirmed my fears. The ice on Mars ...|
 |42|Warmind|Rasputin|218CBI800JRS101\nAI-COM/RSPN: ASSETS//POLARIS/...|
+
+### Destiny Grimoire
 
