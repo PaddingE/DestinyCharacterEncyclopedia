@@ -9,7 +9,7 @@
 ### 데이터 수집
 * [웹 크롤링](https://github.com/PaddingE/DestinyCharacterEncyclopedia/tree/main/Preprocessing/WEB_crawling)
 
-### 데이터 전처리
+### [데이터 전처리](https://github.com/PaddingE/DestinyCharacterEncyclopedia/tree/main/Preprocessing/Time_stamp)
 
 ### 자연어 처리
 * 요약
