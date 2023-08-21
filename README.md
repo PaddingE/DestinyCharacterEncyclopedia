@@ -7,7 +7,7 @@
 ## 프로젝트 진행 방향
 
 ### 데이터 수집
-* [웹 크롤링]()
+* [웹 크롤링](https://github.com/PaddingE/DestinyCharacterEncyclopedia/tree/main/Preprocessing/WEB_crawling)
 
 ### 데이터 전처리
 
