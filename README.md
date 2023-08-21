@@ -13,7 +13,7 @@
 * [Time Stamp Preprocessing](https://github.com/PaddingE/DestinyCharacterEncyclopedia/tree/main/Preprocessing/Time_stamp)
 
 ### 자연어 처리
-* [GPT-3.5-turbo API]()
+* [GPT-3.5-turbo API](https://github.com/PaddingE/DestinyCharacterEncyclopedia/tree/main/NLP/summerization)
 
 ### 프론트엔드
 * Flask
