@@ -6,12 +6,14 @@
 
 ## 프로젝트 진행 방향
 
-### Preprocessing
-*webcrowling
+### 데이터 수집
+*웹 크롤링
 
-### NLP
-*Summary
-*Translate
+### 데이터 전처리
 
-### FrontEnd
+### 자연어 처리
+*요약
+*번역
+
+### 프론트엔드
 * Flask
