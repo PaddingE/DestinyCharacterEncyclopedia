@@ -96,7 +96,6 @@ for i in range(len(list_season)):
     df_data = pd.DataFrame({'expension_name': list_expension, 'title': list_title, 'text':list_text})
     df_data.to_csv('.\Database\df_' + list_season[i] + '.csv', index= False)
 ```
----
 
 * 수집한 데이터 **json**파일로 저장
 ```python
@@ -119,6 +118,8 @@ df_concat.to_json('./Database/weblore.json',orient='records')
 |40|Warmind|Cryptarch|From "Collapse and Post-Collapse Incidents on ...|
 |41|Warmind|Zavala|Ikora has confirmed my fears. The ice on Mars ...|
 |42|Warmind|Rasputin|218CBI800JRS101\nAI-COM/RSPN: ASSETS//POLARIS/...|
+
+---
 
 ### Destiny Grimoire
 
