@@ -9,11 +9,11 @@
 ### 데이터 수집
 * [웹 크롤링](https://github.com/PaddingE/DestinyCharacterEncyclopedia/tree/main/Preprocessing/WEB_crawling)
 
-### [데이터 전처리](https://github.com/PaddingE/DestinyCharacterEncyclopedia/tree/main/Preprocessing/Time_stamp)
+### 데이터 전처리
+* [Time Stamp Preprocessing](https://github.com/PaddingE/DestinyCharacterEncyclopedia/tree/main/Preprocessing/Time_stamp)
 
 ### 자연어 처리
-* 요약
-* 번역
+* [GPT-3.5-turbo API]()
 
 ### 프론트엔드
 * Flask
