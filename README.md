@@ -16,4 +16,16 @@
 * [GPT-3.5-turbo API](https://github.com/PaddingE/DestinyCharacterEncyclopedia/tree/main/NLP/summerization)
 
 ### 프론트엔드
-* Flask
+* [Flask](https://github.com/PaddingE/DestinyCharacterEncyclopedia/tree/main/FrontEnd/Flask/flask_gpt)
+
+## 데이터 수집.웹 크롤링
+### Destiny2 Weblore
+
+```python
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+import pandas as pd
+import re
+```
+
+ 
