@@ -21,7 +21,7 @@
 ## 데이터 수집.웹 크롤링
 ### Destiny2 Weblore
 
-* 웹 크롤링을 위해 필요한 **urlopen, BeautifulSoup** 모듈  Mysql로 관리할 database를 json 파일로 만들어 사용하기 위한 **pandas** import
+* 웹 크롤링에 필요한 **urlopen, BeautifulSoup** 모듈  Mysql로 관리할 database를 json 파일로 만들어 사용하기 위한 **pandas** import
 ```python
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
