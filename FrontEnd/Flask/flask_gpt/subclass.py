@@ -6,7 +6,7 @@ import openai
 import pymysql
 import re
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "USE_YOUR_API_KEY"
 
 class Subclass():
     def __init__(self):
