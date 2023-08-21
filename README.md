@@ -119,6 +119,7 @@ df_concat.to_json('./Database/weblore.json',orient='records')
 |41|Warmind|Zavala|Ikora has confirmed my fears. The ice on Mars ...|
 |42|Warmind|Rasputin|218CBI800JRS101\nAI-COM/RSPN: ASSETS//POLARIS/...|
 
+* [crawling_destiny2_weblore.ipynb](https://github.com/PaddingE/DestinyCharacterEncyclopedia/blob/main/Preprocessing/WEB_crawling/crawling_destiny2_weblore.ipynb) 참고
 ---
 
 ### Destiny Grimoire
