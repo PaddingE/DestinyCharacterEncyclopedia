@@ -102,7 +102,7 @@ for i in range(len(list_season)):
 df_concat.to_json('./Database/weblore.json',orient='records')
 ```
 
-## 수집한 데이터
+### 수집한 데이터
 
 |index|expension_name|title|text|
 |----|----|----|----|
