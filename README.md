@@ -221,16 +221,20 @@ df_grimoire.to_json('./Database/raw_grimoire.json',orient='records')
 
 |index|section|title|sub_title|text|
 |---|---|---|---|---|
-|0	|Guardian|	Classes|	Guardians	|\n"Legends are carved into history by the brav...|
-|1|	Guardian|	Classes	|Class: Hunter	|\n"Our old worlds have grown feral—rabid beast...|
-|2	|Guardian	|Classes	|Ghost Fragment: Hunter|	She leaves the Sparrow and climbs a long way a...|
-|3|	Guardian|	Classes|	Class: Titan	|\n"Stand. Not only to fight, but to strive. Fo...|
-|4|	Guardian|	Classes|	Ghost Fragment: Titan	|/ Tighten that strap.\n/ Eh?\n/ The gardbrace ...|
+|0|Guardian|Classes|Guardians|\n"Legends are carved into history by the brav...|
+|1|Guardian|Classes|Class: Hunter|\n"Our old worlds have grown feral—rabid beast...|
+|2|Guardian|Classes|Ghost Fragment: Hunter|	She leaves the Sparrow and climbs a long way a...|
+|3|Guardian|Classes|Class: Titan|\n"Stand. Not only to fight, but to strive. Fo...|
+|4|Guardian|Classes|Ghost Fragment: Titan|/ Tighten that strap.\n/ Eh?\n/ The gardbrace ...|
 |...|	...|	...|	...|	...|
-|834|	Activities|	Other_Activities	|Festival of the Lost: Underwatch|	"Eri-i-i-is. Oh, Eri-i-i-is."\n"Do you have my...|
-|835|	Activities|	Other_Activities|	The Dawning	|“Pass me those lanterns, would you?” Eva said....|
-|836|	Activities	|Other_Activities|	Dawning Fortunes|	Fortune telling at the start of a new year is ...|
-|837|	Activities|	Other_Activities|	Haakon Precipice|"Hey! Who left this forklift in the middle of ...|
-|838|	Activities	|Other_Activities|	Shining Sands|	"OK. I’ve been hearing a rumor that a racer we...|
+|834|Activities|Other_Activities|Festival of the Lost: Underwatch|"Eri-i-i-is. Oh, Eri-i-i-is."\n"Do you have my...|
+|835|Activities|Other_Activities|The Dawning|“Pass me those lanterns, would you?” Eva said....|
+|836|Activities|Other_Activities|Dawning Fortunes|Fortune telling at the start of a new year is ...|
+|837|Activities|Other_Activities|Haakon Precipice|"Hey! Who left this forklift in the middle of ...|
+|838|Activities|Other_Activities|Shining Sands|"OK. I’ve been hearing a rumor that a racer we...|
 * [crawling_destiny2_weblore.ipynb](https://github.com/PaddingE/DestinyCharacterEncyclopedia/blob/main/Preprocessing/WEB_crawling/crawling_destiny1_grimoire.ipynb) 참고
 ---
+
+## 자연어 처리.GPT 3.5 Turbo
+### GPT 3.5 Turbo API
+
