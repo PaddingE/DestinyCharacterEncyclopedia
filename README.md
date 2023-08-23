@@ -398,7 +398,7 @@ def find_item(self, item_name):
         return title, description, season
 ```
 
-* ㄴㄴㄴㄴ
+* 검색한 캐릭터와 관련된 정보들을 토큰수가 넘지 않게 질문을 작성해서 답변을 받아오는 함수 결과값을 list형식으로 return한다.
 ```python
 ## use_gpt_api 함수를 사용해서 summary한 내용들을 만들어주는 함수
     def make_output(self,df_character_sort,character_name):
@@ -450,3 +450,76 @@ def find_item(self, item_name):
                             else:
                                 continue
 ```
+
+* 한번 질문을 하고나서 나온 결과값이 너무 길면 한번더 요약하기 위해 list형식으로 데이터가 들어왔을때 처리하는 부분
+```python
+## 한번 요약한 데이터가 너무 길면 한번더 요약하기위해 사용될 부분                 
+        elif type(df_character_sort) == list:
+            for i in range(len(df_character_sort)):
+                if len(self.tokenizer.encode(df_character_sort[i])) < 3000:
+                    input_text += df_character_sort[i]
+                    if i + 1 < len(df_character_sort) and len(self.tokenizer.encode(input_text + df_character_sort[i + 1])) >= 3000:
+                        list_output_content.append(self.use_gpt_api(input_text,character_name))
+                        input_text = ''
+            
+                    ## index error방지
+                    elif i + 1 == len(df_character_sort):
+                        list_output_content.append(self.use_gpt_api(input_text,character_name))
+                        input_text = ''
+            
+                    else:
+                        continue
+                else:
+                    list_split = df_character_sort[i].split('.')
+        
+                    for j in range(len(list_split)):
+                        if len(self.tokenizer.encode(list_split[j])) < 3000:
+                            input_text += list_split[j]
+                            if j + 1 < len(list_split) and len(self.tokenizer.encode(input_text + list_split[j + 1])) >= 3000:
+                                list_output_content.append(self.use_gpt_api(input_text,character_name))
+                                input_text = ''
+                
+                            ## index error방지    
+                            elif j + 1 == len(list_split):
+                                list_output_content.append(self.use_gpt_api(input_text,character_name))
+                                input_text = ''
+                    
+                            else:
+                                continue
+                            
+        else:
+            print("input error : input is not Dataframe or List")      
+        
+        finish_time = time.time()
+        total_time = finish_time - start_time
+        
+        print(f"종료, 총 걸린 시간: {total_time}")    
+                      
+        return list_output_content
+```
+
+* gpt에 질문할 질문지 작성해주는 함수
+```python
+## gpt-api 사용해서 summary 요청해주는 함수
+    def use_gpt_api(self,input_text,character_name):
+        list_input_content = []
+    
+        ## gpt에 요청할 기본 환경과 질문 작성 부분
+        list_input_content.append({"role": "system", "content": "This is the beginning of your NEW conversation."})
+        list_input_content.append({"role": "assistant", "content": "You are a helpful summarizer chatbot."})
+        list_input_content.append({"role": "user", "content": f"please substantiated summary about {character_name} based on the following text : " 
+                                   + input_text})
+    
+        ## 초기화 부분에서 설정한 gpt모델에 질문 보내기
+        response = openai.ChatCompletion.create(model=self.model,messages=list_input_content)
+        answer = response['choices'][0]['message']['content']
+    
+        ## 딜레이 없이 너무 빨리 보내면 에러가 발생해 0.7초 딜레이 걸어주기
+        time.sleep(0.7)
+    
+        return answer
+```
+
+* [subclass.py](https://github.com/PaddingE/DestinyCharacterEncyclopedia/blob/main/FrontEnd/Flask/flask_gpt/subclass.py) 참고
+
+---
