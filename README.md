@@ -236,5 +236,61 @@ df_grimoire.to_json('./Database/raw_grimoire.json',orient='records')
 ---
 
 ## 자연어 처리.GPT 3.5 Turbo
-### GPT 3.5 Turbo API
+### GPT 3.5 Turbo API 기본 사용법
 
+* OpenAi 챗봇 모델을 사용하기 위해 모듈 설치
+```python
+pip install openai
+```
+
+* OpenAi 챗봇 모델이 토큰 제한을 가지고 있어 미리 토큰을 세서 질문하기 위해 tiktoken 모듈 설치
+```python
+pip install tiktoken
+```
+
+* 사용할 모듈 import
+```python
+import os
+import openai
+from tiktoken import Tokenizer
+```
+
+* 본인의 Api Key 세팅
+```python
+openai.api_key = "USE_YOUR_API_KEY"
+```
+
+* GPT에 물어보기 위한 질문지 작성
+```python
+messages = [{"role":"user","content":"Please summarize the following text"},
+            {"role":"user","content":"""A compact submersible of Eliksni design finishes its descent through the hazy depths of Titan\'s methane ocean. 
+                                        The craft\'s seafloor landing kicks up a cloud of dark silt and microbial life shimmering like stars. 
+                                        The submersible\'s dorsal airlock cracks open with a rush of bubbles, then slowly folds down into a ramp, 
+                                        allowing a trio of figures armored in deep diving gear to emerge. 
+                                        The submersible\'s single floodlight sweeps across the ocean floor, revealing the alien landscape of twisting coral. 
+                                        \n\nFenchurch approaches one of the coral growths, running a gloved hand over its surface. \"These polyps…\" he mutters.
+                                        \"Is this—\" He stops suddenly at the sound of a mechanical snap, and turns to see Chalco and Lisbon-13 plant a large, 
+                                        mechanical spire in the ground. Internal lights flicker on as the spire whirrs to life, 
+                                        creating a regulated field of water pressure around the submersible. \n\nFenchurch steps away from the coral, rubbing his fingers together. 
+                                        He looks to the spire as its sides open like a flower and release several drones, each outfitted with floodlights. 
+                                        The drones swim out ahead, revealing the disorienting flicker of what looks like the water\'s surface but at an impossibly vertical angle.
+                                        \n\n\"This way,\" Chalco directs as she turns to follow the drones. 
+                                        Fenchurch and Lisbon look at one another, steady themselves, and fall in line behind their fireteam leader. 
+                                        \n\n\"Stop me if you\'ve heard this one before,\" Fenchurch says, anxiously checking the talisman clipped to his armor. 
+                                        \"Two Hunters and a Warlock walk into the deep…\"
+                                        """}
+            ]
+```
+
+* 사용할 gpt모델에 질문지를 사용해서 채팅 보내서 답변 받기
+```python
+completion = openai.ChatCompletion.create(
+    model = 'gpt-3.5-turbo',
+    messages = messages
+)
+```
+
+* 받은 답변 확인
+```python
+completion.choices
+```
