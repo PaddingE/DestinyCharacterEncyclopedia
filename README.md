@@ -294,3 +294,14 @@ completion = openai.ChatCompletion.create(
 ```python
 completion.choices
 ```
+
+* [summarization_gpt_api.ipynb](https://github.com/PaddingE/DestinyCharacterEncyclopedia/blob/main/NLP/summerization/summarization_gpt_api.ipynb) 참고
+
+---
+
+### GPT 3.5 Turbo API 활용
+
+* 받은 답변 확인
+```python
+
+```
