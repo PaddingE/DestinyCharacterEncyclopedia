@@ -4,6 +4,12 @@
 
  웹페이지에 Destiny2 스토리와 관련된 정보들을 보여주고 검색창에 특정 캐릭터 입력시 해당 캐릭터에 관한 내용을 하나의 문서로 요약해 보여주는 것을 목표로 시작
 
+![홈페이지](/output_images/output_1.png)
+![검색결과](/output_images/output_3.png)
+![검색결과](/output_images/output_4.png)
+![검색결과](/output_images/output_5.png)
+![아이템정보](/output_images/output_6.png)
+
 ## 프로젝트 진행 방향
 
 ### 데이터 수집
